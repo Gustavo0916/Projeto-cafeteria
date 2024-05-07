@@ -1,0 +1,2093 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=MonteCarlo&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#container-principal {
+    margin: 0 auto;
+}
+
+/************ INICIO SEÇÃO HOME **************/
+
+#container-home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/imagens/img-fundo-home.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.caixa-logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.caixa-logo img {
+    width: 50px;
+}
+
+.caixa-logo h1 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 55px;
+    height: 65px;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navegacao ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navegacao ul li a {
+    color: #fff;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caixa-btn-nav button {
+    background: #733528;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.caixa-principal-home {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    gap: 225px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.caixa-descricao-home {
+    width: 480px;
+    height: 400px;
+}
+
+.caixa-descricao-home h3 {
+    color: #e6e6e6;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: .9rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.caixa-titulo-home {
+    width: 450px;
+}
+
+.caixa-titulo-home h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: "IM Fell French Canon SC", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.descricao-home p {
+    color: #e8e8e8;
+    margin: 15px 0;
+}
+
+.caixa-btn-home {
+    margin: 15px 0;
+    display: flex;
+    gap: 25px;
+}
+
+.caixa-btn-home button {
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.btn-first {
+    background: #a34e3e;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-second {
+    background: rgb(222, 117, 6);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 769px) {
+    .menu-mobile {
+        display: none;
+    }
+
+    .btn-abrir-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #container-home {
+        height: 85vh;
+    }
+
+    .navegacao {
+        display: none;
+    }
+
+    .caixa-logo {
+        margin-left: -240px;
+    }
+
+    .caixa-descricao-home h3 {
+        padding-left: 82px;
+    }
+
+    .caixa-titulo-home {
+        text-align: center;
+        margin-left: -30px;
+    }
+
+    .descricao-home p {
+        color: #f0f0f0;
+        text-align: center;
+        padding-right: 60px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .caixa-btn-home {
+        margin-left: 42px;
+        margin-top: 30px;
+    }
+
+    /**** MENU MOBILE ****/
+    .btn-abrir-menu i {
+        color: #fff;
+        font-size: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu-mobile {
+        background: rgb(222, 117, 6);
+        height: 100vh;
+        width: 0%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        overflow: hidden;
+        transition: .8s;
+    }
+
+    .menu-mobile.abrir-menu {
+        width: 70%;
+    }
+
+    .menu-mobile.abrir-menu ~ .overlay-menu {
+        display: block;
+    }
+
+    .menu-mobile .btn-fechar {
+        padding: 20px 4%;
+    }
+
+    .menu-mobile .btn-fechar i {
+        color: #733528;
+        font-size: 25px;
+    }
+
+    .menu-mobile nav ul {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .menu-mobile nav ul li a {
+        color: #fff;
+        font-size: 20px;
+        padding-right: 10%;
+    }
+
+    .caixa-btn-nav {
+        padding: 0 20px;
+    }
+
+    .caixa-btn-nav button {
+        width: 230px;
+        text-transform: uppercase;
+    }
+
+    .overlay-menu {
+        background-color: #0000009f;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 88888;
+        display: none;
+    }
+}
+
+/************ FIM SEÇÃO HOME **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO SOBRE NÓS **************/
+.img-xicara {
+    position: absolute;
+    left: 378px;
+    bottom: 25px;
+}
+
+.img-xicara img {
+    width: 160px;
+}
+
+.img-desenho-cafe {
+    position: absolute;
+    right: -50px;
+    top: 100px;
+}
+
+.img-desenho-cafe img {
+    width: 190px;
+    opacity: .2;
+}
+
+#container-sobreNos {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.caixa-left-sobre {
+    width: 350px;
+    height: 450px;
+}
+
+.caixa-left-sobre img {
+    width: 100%;
+    height: 100%;
+}
+
+/**/
+
+.caixa-right-sobre {
+    width: 500px;
+    height: 410px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caixa-titulo-sobre {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icone-sobre {
+    width: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.icone-sobre img {
+    width: 85%;
+}
+
+.caixa-titulo-sobre h3 {
+    color: #733528;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.caixa-titulo-secundaria-sobre {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+.caixa-titulo-secundaria-sobre h1 {
+    color: #502017;
+    font-size: 3.5rem;
+    font-family: "Gentium Plus", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.descricao-sobre {
+    margin-top: 20px;
+}
+
+.descricao-sobre p {
+    color: #a2a2a2;
+    font-size: .85rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.caixa-btn-sobre {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-ass {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caixa-ass p {
+    font-family: "MonteCarlo", cursive;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.caixa-ass h2 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.btn-sobre {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.btn-sobre button {
+    padding: 10px 30px;
+    background: #733528;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #container-sobreNos {
+        flex-direction: column-reverse;
+        height: 135vh;
+    }
+
+    .img-xicara {
+        display: none;
+    }
+
+    .img-desenho-cafe {
+        display: none;
+    }
+
+    .caixa-left-sobre {
+        margin-top: 50px;
+    }
+
+    .icone-sobre {
+        margin-left: 60px;
+    }
+
+    .caixa-titulo-secundaria-sobre h1 {
+        text-align: center;
+        font-size: 3rem;
+        padding: 0px 35px;
+    }
+
+    .descricao-sobre {
+        text-align: center;
+        padding: 10px 55px;
+    }
+
+    .caixa-btn-sobre {
+        text-align: center;
+        height: 140px;
+        gap: 10px;
+        flex-direction: column-reverse;
+    }
+
+    .caixa-ass {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-sobre {
+        padding-left: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/************ FIM SEÇÃO SOBRE NÓS **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO RECURSOS **************/
+.caixa-img-recurso {
+    position: absolute;
+    top: -5px;
+}
+
+.caixa-img-recurso img {
+    width: 200px;
+    opacity: .2;
+    transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+}
+
+#container-recursos {
+    position: relative;
+    width: 100%;
+    height: 145vh;
+    background: #f6f5f1;
+}
+
+.caixa-titulo-recursos {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-icone-recursos img {
+    width: 20px;
+}
+
+.caixa-titulo-recursos h3 {
+    color: #733528;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.caixa-secundaria-titulo-recursos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-secundaria-titulo-recursos h1 {
+    color: #502017;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 2rem;
+}
+
+.caixa-descricao-recursos {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-descricao-recursos p {
+    width: 850px;
+    color: #a2a2a2;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+}
+
+.caixa-item-recursos {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-resursos {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 10px 5px 5px #dcdbdb;
+}
+
+.box-icone {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-icone img {
+    width: 65%;
+    height: 65%;
+}
+
+.title-recursos {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.title-recursos h3 {
+    font-size: 1.15rem;
+    font-family: "IM Fell French Canon SC", serif;
+    color: #502017;
+    padding-left: 7px;
+}
+
+.descricao-caixa-recursos {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.descricao-caixa-recursos p {
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+    font-weight: 300;
+    padding-left: 7px;
+    color: #a2a2a2;
+}
+
+.caixa-btn-recursos {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.caixa-btn-recursos button {
+    border: none;
+    background: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    padding-left: 7px;
+    cursor: pointer;
+    color: #502017;
+}
+
+.caixa-btn-recursos button:hover {
+    text-decoration: underline;
+    color: #502017;
+}
+
+.caixa-btn-recursos i {
+    font-size: .85rem;
+    margin-top: 2px;
+    color: #502017;
+    cursor: pointer;
+}
+
+/****/
+.caixa-formulario {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-formulario {
+    width: 500px;
+    height: 340px;
+    background: #3f271d;
+}
+
+.caixa-img-formulario {
+    width: 500px;
+    height: 340px;
+}
+
+.caixa-img-formulario img {
+    width: 100%;
+    height: 100%;
+}
+
+.titulo-form {
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.titulo-form h3 {
+    color: #e6e6e6;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.titulo-form-principal {
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.titulo-form-principal h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "IM Fell French Canon SC", serif;
+}
+
+.caixa-nome-sobrenome {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 40px;
+}
+
+::placeholder {
+    color: #b5b5b5;
+}
+
+.caixa-nome-sobrenome input {
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    color: #e6e6e6;
+    background: #311d16;
+}
+
+.caixa-email-telefone {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caixa-email-telefone input {
+    width: 200px;
+    height: 35px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    color: #e6e6e6;
+    background: #311d16;
+}
+
+.caixa-data-hora {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caixa-data-hora input {
+    width: 200px;
+    height: 35px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    color: #e6e6e6;
+    background: #311d16;
+}
+
+.caixa-btn-form {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 40px;
+}
+
+.caixa-btn-form button {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background: #e6e6e6;
+    color: #311d16;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #container-recursos {
+        height: 248vh;
+    }
+
+    .caixa-img-recurso {
+        display: none;
+    }
+
+    .caixa-secundaria-titulo-recursos {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .caixa-descricao-recursos {
+        padding: 0px 5px;
+    }
+
+    .caixa-item-recursos {
+        flex-direction: column;
+        height: 125vh;
+    }
+
+    .caixa-formulario {
+        flex-direction: column;
+        height: 92vh;
+    }
+
+    .titulo-form {
+        margin-left: 30px;
+    }
+
+    .titulo-form-principal h1 {
+        font-size: 1.6rem;
+        padding-left: 30px;
+    }
+
+    .caixa-nome-sobrenome input {
+        width: 86%;
+        margin-left: 30px;
+    }
+
+    .caixa-email-telefone input {
+        width: 40%;
+        margin: 0px 30px;
+    }
+
+    .caixa-data-hora input {
+        width: 40%;
+        margin: 0px 30px;
+    }
+
+    .caixa-btn-form button {
+        width: 86%;
+        margin-left: 30px;
+    }
+}
+
+/************ FIM SEÇÃO RECURSOS **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO MENU **************/
+
+#container-menu {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.desenho-cafe-menu {
+    position: absolute;
+    right: 8px;
+    top: 35px;
+}
+
+.desenho-cafe-menu img {
+    width: 200px;
+    opacity: .2;
+    transform: rotate(-100deg);
+	-ms-transform: rotate(-100deg);
+	-webkit-transform: rotate(-100deg);
+}
+
+.titulo-menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-menu img {
+    width: 25px;
+}
+
+.titulo-menu h3 {
+    color: #733528;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.titulo-secundario-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-secundario-menu h1 {
+    color: #502017;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 2rem;
+}
+
+.caixa-descricao-menu {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-descricao-menu p {
+    width: 850px;
+    color: #a2a2a2;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+}
+
+/****/
+
+.caixa-principal-menu {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-menu-left {
+    width: 480px;
+    height: 385px;
+}
+
+.caixa-item-menu {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-img-produto {
+    width: 100px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-img-produto img {
+    width: 100%;
+    height: 100%;
+}
+
+.caixa-titulo-descricao {
+    width: 260px;
+    height: 96px;
+    display: flex;
+    gap: 5px;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caixa-titulo-descricao h3 {
+    color: #311d16;
+    font-family: "IM Fell French Canon SC", serif;
+}
+
+.caixa-titulo-descricao p {
+    font-family: "Open Sans", sans-serif;
+    font-size: .75rem;
+    color: #a2a2a2;
+}
+
+.caixa-preco {
+    width: 120px;
+    height: 96px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.linha-pontilhada {
+    width: 30px;
+    border: 1px dotted #000;
+}
+
+.preco h3 {
+    font-size: 1.1rem;
+    color: #311d16;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+/****/
+
+.caixa-menu-right {
+    width: 480px;
+    height: 385px;
+}
+
+@media screen and (max-width: 768px) {
+    #container-menu {
+        height: 140vh;
+    }
+
+    .desenho-cafe-menu {
+        display: none;
+    }
+
+    .caixa-descricao-menu  {
+        padding: 0px 5px;
+        height: 100px;
+    }
+
+    .caixa-principal-menu {
+        height: 107vh;
+        flex-direction: column;
+    }
+
+    .caixa-item-menu {
+        padding: 0px 40px;
+        margin-bottom: 5px;
+    }
+
+    .caixa-menu-right {
+        margin-top: -18px;
+    }
+
+    .linha-pontilhada {
+        display: none;
+    }
+}
+
+/************ FIM SEÇÃO MENU **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO LOJA ONLINE **************/
+
+#container-loja-online {
+    width: 100%;
+    height: 100vh;
+    background: #f6f5f1;
+    position: relative;
+}
+
+.titulo-loja {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-loja img {
+    width: 25px;
+}
+
+.titulo-loja h3 {
+    color: #733528;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.titulo-secundario-loja {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-secundario-loja h1 {
+    color: #502017;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 2rem;
+}
+
+.caixa-descricao-loja {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-descricao-loja p {
+    width: 850px;
+    color: #a2a2a2;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+}
+
+/** SLIDE **/
+
+.p-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 95%;
+}
+
+.product-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin: 0px 20px;
+}
+
+.p-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.p-img a, 
+.p-img {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.p-img a img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+}
+
+.p-box-text {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.product-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-category span {
+    color: #acacac;
+    font-size: .9rem;
+    margin: 5px 0px;
+    font-family: "IM Fell French Canon SC", serif;
+}
+
+.price-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.price-buy .p-price {
+    font-size: 1.1rem;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+
+.p-buy-btn button {
+    border: none;
+    background: #3f271d;
+    color: #fff;
+    padding: 7px 12px;
+    font-size: .7rem;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+.p-discount {
+    top: 20px;
+    position: absolute;
+    color: #fff;
+    background: #e63b3b;
+    font-size: .7rem;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+@media(max-width: 500px) {
+    .product-box {
+        margin: 0px 10px;
+    }
+
+    .p-slide {
+        width: 100%;
+    }
+
+    .p-img a,
+    .p-img {
+        height: 200px;
+    }
+
+    .price-buy .p-price {
+        font-size: 1.1rem
+    }
+}
+
+/****/
+
+@media screen and (max-width: 768px) {
+    #container-loja-online {
+        height: 90vh;
+    }
+
+    .titulo-secundario-loja {
+        text-align: center;
+    }
+
+    .caixa-descricao-loja {
+        margin-top: 15px;
+        padding: 0px 5px;
+    }
+}
+
+/************ FIM SEÇÃO LOJA ONLINE **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO BLOG **************/
+.img-desenho-cafe-blog {
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+
+.img-desenho-cafe-blog img {
+    width: 200px;
+    opacity: .2;
+    transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+}
+
+#container-blog {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.titulo-blog {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-blog img {
+    width: 25px;
+}
+
+.titulo-blog h3 {
+    color: #733528;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.caixa-secundaria-blog {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-secundaria-blog h1 {
+    color: #502017;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 2rem;
+}
+
+.caixa-descricao-blog {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-descricao-blog p {
+    width: 850px;
+    color: #a2a2a2;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+}
+
+.caixa-principal-blog {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/****/
+
+.caixa-blog {
+    width: 360px;
+    height: 200px;
+    border: 1px solid rgb(203, 203, 203);
+}
+
+.caixa-perfil-nome {
+    width: 100%;
+    height: 70px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-img-perfil {
+    width: 80px;
+    height: 70px;
+}
+
+.img-perfil img {
+    width: 80%;
+    height: 80%;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+
+.caixa-nome-cliente {
+    width: 180px;
+    height: 70px;
+    display: flex;
+    gap: 5px;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caixa-nome-cliente h4 {
+    font-size: .9rem;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+}
+
+.caixa-nome-cliente h5 {
+    color: #333333;
+    font-size: .7rem;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caixa-icone-quote {
+    width: 100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.caixa-icone-quote i {
+    font-size: 3rem;
+    color: #dddddd;
+}
+
+.caixa-icone-star {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding-left: 22px;
+}
+
+.caixa-icone-star i {
+    color: #f8c52c;
+}
+
+.caixa-descricao-blog-cliente {
+    width: 100%;
+    height: 90px;
+    padding: 7px 22px;
+}
+
+.caixa-descricao-blog-cliente p {
+    font-size: .8rem;
+    color: #333333;
+    font-weight: 200;
+    font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    #container-blog {
+        height: 123vh;
+    }
+
+    .img-desenho-cafe-blog {
+        display: none;
+    }
+
+    .caixa-secundaria-blog {
+        text-align: center;
+    }
+
+    .caixa-descricao-blog {
+        margin-top: 15px;
+        padding: 0px 5px;
+    }
+
+    .caixa-principal-blog {
+        height: 91vh;
+        flex-direction: column;
+    }
+}
+
+/************ FIM SEÇÃO BLOG **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO QUALIDADE **************/
+
+#container-qualidade {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-left-qualidade {
+    width: 50%;
+    height: 400px;
+    padding: 20px 50px;
+    background: #3f271d;
+}
+
+.caixa-titulo-qualidade {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.caixa-titulo-qualidade img {
+    width: 25px;
+}
+
+.caixa-titulo-qualidade h3 {
+    color: #dcdbdb;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.caixa-secundaria-qualidade h1 {
+    color: #fff;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.caixa-descricao-qualidade p {
+    color: #a2a2a2;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+    margin-bottom: 10px;
+}
+
+.caixa-porcentagem {
+    font-size: .75rem;
+    position: absolute;
+    margin-left: 2.5px;
+    margin-top: 2px;
+}
+
+.caixa-icone-qualidade {
+    position: absolute;
+    right: 91px;
+    top: -1px;
+}
+
+.caixa-icone-qualidade img {
+    width: 30px;
+}
+
+.caixa-descricao-qualidade-produto {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.caixa-descricao-qualidade-produto h4 {
+    font-family: "IM Fell French Canon SC", serif;
+    color: #dcdbdb;
+}
+
+.caixa-barra-qualidade {
+    width: 100%;
+    height: 10px;
+    margin-top: 5px;
+    background: #d5d4d0;
+}
+
+.barra-interna {
+    width: 80%;
+    height: 10px;
+    background: #fff;
+}
+
+.barra-interna-2 {
+    width: 90%;
+    height: 10px;
+    background: #fff;
+}
+
+.caixa-icone-qualidade-2 {
+    position: absolute;
+    right: 38px;
+    top: -1px;
+}
+
+.caixa-icone-qualidade-2 img {
+    width: 30px;
+}
+
+/****/
+
+.barra-interna-3 {
+    width: 70%;
+    height: 10px;
+    background: #fff;
+}
+
+.caixa-icone-qualidade-3 {
+    position: absolute;
+    right: 144px;
+    top: -1px;
+}
+
+.caixa-icone-qualidade-3 img {
+    width: 30px;
+}
+
+/****/
+
+.caixa-right-qualidade {
+    width: 50%;
+    height: 400px;
+}
+
+.caixa-right-qualidade img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #container-qualidade {
+        height: 116.5vh;
+        flex-direction: column;
+    }
+
+    .caixa-left-qualidade {
+        width: 460px;
+        height: 465px;
+    }
+
+    .caixa-right-qualidade {
+        width: 460px;
+    }
+
+    .caixa-icone-qualidade {
+        right: 57px;
+        top: -1px;
+    }
+
+    .caixa-icone-qualidade-2 {
+        right: 22px;
+        top: -1px;
+    }
+
+    .caixa-icone-qualidade-3 {
+        right: 93px;
+        top: -1px;
+    }
+}
+
+/************ INICIO SEÇÃO QUALIDADE **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO BLOG NOTICIAS **************/
+
+#container-blog-noticias {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.titulo-blog-noticia {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-blog-noticia img {
+    width: 25px;
+}
+
+.titulo-blog-noticia h3 {
+    color: #733528;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.caixa-secundaria-blog-noticia {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-secundaria-blog-noticia h1 {
+    color: #502017;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 2rem;
+}
+
+.caixa-descricao-blog-noticia {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-descricao-blog-noticia p {
+    width: 850px;
+    color: #a2a2a2;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+}
+
+.caixa-principal-blog-noticia {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-data-blog {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    background: #502017;
+    width: 130px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-data-blog p {
+    color: #d5d4d0;
+    font-size: .65rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.caixa-item-blog-noticia {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    padding: 10px;
+    border: 1px solid rgb(227, 227, 227);
+}
+
+.caixa-img-blog {
+    width: 100%;
+    height: 200px;
+}
+
+.caixa-img-blog img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.caixa-titulo-item-blog h3 {
+    color: #000;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.descricao-blog-noticia p {
+    color: #b5b5b5;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+    margin-top: 5px;
+}
+
+.btn-blog button {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #502017;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #container-blog-noticias {
+        height: 189vh;
+    }
+
+    .caixa-principal-blog-noticia {
+        height: 162vh;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .caixa-descricao-blog-noticia {
+        margin-top: 15px;
+        padding: 0px 5px;
+    }
+}
+
+/************ FIM SEÇÃO BLOG NOTICIAS **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO BOLETIM NOTICIA **************/
+
+#container-boletim-notiicia {
+    width: 100%;
+    height: 100vh;
+    background: #f6f5f1;
+}
+
+.titulo-boletim-noticia {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-boletim-noticia img {
+    width: 25px;
+}
+
+.titulo-boletim-noticia h3 {
+    color: #733528;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.caixa-secundaria-boletim-noticia {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-secundaria-boletim-noticia h1 {
+    color: #502017;
+    font-family: "IM Fell French Canon SC", serif;
+    font-size: 2rem;
+}
+
+.caixa-descricao-boletim-noticia {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-descricao-boletim-noticia p {
+    width: 850px;
+    color: #a2a2a2;
+    font-family: "Open Sans", sans-serif;
+    font-size: .80rem;
+}
+
+.caixa-inscrever {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-inscrever input {
+    width: 400px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    background: #fff;
+}
+
+.caixa-btn-inscrever button {
+    width: 150px;
+    height: 30px;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    background: #733528;
+    color: #ececec;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.caixa-galeria-fotos {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.caixa-left-galeria {
+    width: 50%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-interna-left {
+    width: 50%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-left-galeria img {
+    width: 50%;
+    height: 320px;
+}
+
+.img-galeria-2 img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.img-galeria-3 img {
+    width: 100%;
+    height: 160px;
+    margin-top: -4px;
+    object-fit: cover;
+}
+
+/****/
+
+.caixa-right-galeria {
+    position: relative;
+    width: 50%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-interna-right {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 320px;
+}
+
+.caixa-interna-right-2 {
+    width: 50%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-galeria-4 img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.img-galeria-5 img {
+    width: 100%;
+    height: 160px;
+    margin-top: -4px;
+    object-fit: cover;
+}
+
+.caixa-interna-right img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #container-boletim-notiicia {
+        height: 127vh;
+    }
+
+    .caixa-secundaria-boletim-noticia {
+        text-align: center;
+    }
+
+    .caixa-inscrever {
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .caixa-galeria-fotos {
+        flex-direction: column;
+        height: 87vh;
+    }
+
+    .caixa-left-galeria {
+        width: 100%;
+    }
+
+    .caixa-right-galeria {
+        width: 100%;
+    }
+}
+
+/************ FIM SEÇÃO BOLETIM NOTICIA **************/
+
+/****/
+
+/****/
+
+/************ INICIO SEÇÃO FOOTER **************/
+
+footer {
+    margin-top: -13px;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    background: #51332b;
+}
+
+.caixa-left-footer {
+    width: 300px;
+    height: 55vh;
+}
+
+.logo-footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo-footer img {
+    width: 40px;
+}
+
+.logo-footer h3 {
+    font-family: "IM Fell French Canon SC", serif;
+    color: #fff;
+}
+
+.descricao-conatato-footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.descricao-conatato-footer i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.descricao-conatato-footer p {
+    color: #fff;
+}
+
+/****/
+
+.caixa-center-footer {
+    width: 300px;
+    height: 55vh;
+}
+
+.titulo-link-footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.titulo-link-footer h3 {
+    font-family: "IM Fell French Canon SC", serif;
+    color: #fff;
+}
+
+.nav-footer ul {
+    margin-top: 20px;
+    display: flex;
+    gap: 17px;
+    flex-direction: column;
+}
+
+.nav-footer ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+/****/
+
+.caixa-right-footer {
+    width: 500px;
+    height: 55vh;
+}
+
+.titulo-right-footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.titulo-right-footer h3 {
+    font-family: "IM Fell French Canon SC", serif;
+    color: #fff;
+}
+
+iframe {
+    width: 450px;
+    height: 225px;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        margin-top: -11px;
+        flex-direction: column;
+        height: 117vh;
+    }
+
+    .caixa-left-footer {
+        margin-top: 20px;
+        height: 270px;
+    }
+
+    .caixa-center-footer {
+        margin-top: 30px;
+        height: 300px;
+    }
+
+    .caixa-right-footer {
+        margin-top: 30px;
+    }
+
+    .caixa-right-footer h3 {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/************ FIM SEÇÃO FOOTER **************/
